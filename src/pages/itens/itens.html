@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Itens
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only on-click="goToAddItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <ion-list id="itens-list1">
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <ion-item color="none" on-click="goToItem()">
+        <ion-thumbnail data-ng-src="" item-left>
+          <img src = "./../../assets/img/speakers/bear.jpg">
+        </ion-thumbnail>
+        <h2>
+          {{item.name}}
+        </h2>
+      </ion-item>
+   </ion-item-sliding>
+  </ion-list>
+</ion-content>
